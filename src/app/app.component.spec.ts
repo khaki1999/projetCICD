@@ -24,14 +24,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-
-    const titleElement = compiled.querySelector('.title');
-
-    if (titleElement) {
-      expect(titleElement.textContent).toContain('projetCICD');
-    } else {
-      fail('Élément .title non trouvé dans le template');
-    }
+    expect(compiled.querySelector('.content span')?.textContent).toContain('projetCICD app is running!');
   });
 
 
