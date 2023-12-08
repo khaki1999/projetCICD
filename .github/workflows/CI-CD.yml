@@ -23,13 +23,20 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
-          node-version: '18.x' # Utilisation de la dernière version LTS de Node.js
+          node-version: '18.x' 
 
       - name: Install dependencies
         run: npm install
+      - name: Install dependencies for ChromeHeadless
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libnss3 gconf-service libgconf-2-4 fonts-liberation
 
-      - name: Run tests
-        run: npm run test -- --no-watch
+      - name: Run tests with code coverage
+        run: npm run test -- --no-watch --code-coverage
+
+
+
 
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
