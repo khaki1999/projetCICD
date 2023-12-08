@@ -20,5 +20,19 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('projetCICD');
   });
 
+  it('should render title', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+
+    const titleElement = compiled.querySelector('.title');
+
+    if (titleElement) {
+      expect(titleElement.textContent).toContain('projetCICD app is running!');
+    } else {
+      fail('Élément .title non trouvé dans le template');
+    }
+  });
+
 
 });
