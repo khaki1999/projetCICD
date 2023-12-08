@@ -4,8 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { AccueilComponent } from './component/accueil/accueil.component';
-import { AboutComponent } from './component/about/about.component';
+
+
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import { FormsModule } from '@angular/forms';
 
@@ -14,8 +14,7 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
 
 
-    AccueilComponent,
-    AboutComponent
+
   ],
   imports: [
     BrowserModule,
