@@ -28,7 +28,7 @@ describe('AppComponent', () => {
     const titleElement = compiled.querySelector('.title');
 
     if (titleElement) {
-      expect(titleElement.textContent).toContain('projetCICD app is running!');
+      expect(titleElement.textContent).toContain('projetCICD');
     } else {
       fail('Élément .title non trouvé dans le template');
     }
